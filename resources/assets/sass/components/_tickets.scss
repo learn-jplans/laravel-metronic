@@ -1,0 +1,559 @@
+.portlet {
+	position: absolute;
+	.portlet-title {
+		color: #fff;
+
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+	&.ticket-portlet {
+		width: 500px;
+		top: -9px;
+		left: 20px;
+		.portlet-body {
+			padding: 0;
+			height: 350px;
+	  		overflow-y: auto;
+	  		overflow-x: hidden; 
+	  		display: block;
+		}
+	}
+	&.ticket-detail-portlet{
+		display: none;
+		/*z-index: 10000;*/
+	    position: absolute;
+	    top: -30px;
+	    left: -1px;
+	    right: 0;
+	    bottom: 0;
+	    margin: 0;
+	    > .portlet-body {
+	    	/*position: absolute;*/
+	    	height: 585px;
+	    	left: 0;
+			right: 0;
+			bottom: 0;
+			padding: 0;
+
+			.profile-container {
+				border: 1px solid gray;
+			  	margin: 0;
+			  	padding: 0;
+			  	width: 25%;
+			  	height: inherit;
+			  	float: left;
+			  	overflow: auto;
+			  	.profile-title{
+			  		text-align: center;
+					padding: 0;
+					border-bottom: 1px solid gray;
+					display: block;
+					margin: 0;
+					text-transform: uppercase;
+  					font-weight: bold;
+			  	}
+			  	.profile-avatar {
+					height: 150px;
+					width: 200px;
+					margin: auto;
+					margin-top: 20px;
+					margin-bottom: 20px;
+					background-color: gray;
+				}
+				.profile-info {
+					padding: 0px 10px;
+					li {
+						/*list-style: none;*/
+						padding: 6px;
+					}
+					li.other-info{
+						background: gray;
+						margin-bottom: 3px;
+						text-align: center;
+						color: #fff;
+					}
+				}
+				
+				.profile-detail{
+					padding: 18px;
+					li{
+						/*list-style: none;*/
+						padding: 5px;
+					}
+					.detail-label{
+						font-weight: bold;
+					}
+				}
+
+				.medical-container {
+					padding: 18px;
+					.medical-info{
+						margin-bottom: 20px;
+						h5{
+							font-weight: bold;
+						}
+					}
+				}
+
+				.history-parent {
+					padding: 20px 12px 0;
+					.history-child {
+						/*list-style: none;*/
+						background: gray;
+						margin-bottom: 5px;
+
+						a {
+							text-decoration: none;
+							display: block;
+							color: #fff;
+						}
+						a div {
+							display: inline-block;
+							padding-top: 7px;
+  							padding-left: 7px;
+  							height: 30px;
+  							vertical-align: middle;
+						}
+						.ticket-date {
+						  width: 75px;
+						}
+						.ticket-desc {
+						  width: 180px;
+						  overflow: hidden;
+						  text-overflow: ellipsis;
+						  white-space: nowrap;
+						}
+						.ticket-icon {
+						  width: 50px;
+						  text-align: center;
+						}
+					}
+				}
+				
+			}
+			.detail-container{
+				
+			  	margin: 0;
+			  	padding: 0;
+			  	width: 75%;
+			  	height: inherit;
+			  	float: left;
+			  	overflow: auto;
+			  	.col1{
+			  		float: left;
+			  		width: 60%;
+			  		height: inherit;
+			  		padding: 10px 0 10px 10px;
+			  		.responder{
+			  			margin-top: 10px;
+			  			.od-title.bold.uppercase {
+						  display: inline-block;
+						  width: 70%;
+						  padding: 10px;
+						}
+						.od-status {
+							display: inline-block;
+						}
+						.responder-dispatch-note{
+							border-bottom: none !important;
+  							height: 250px !important;
+						}
+			  		}
+			  		.dispatcher-btn-container{
+			  			margin-top: 10px;
+			  		}
+			  		.original-details-container{
+			  			border: 1px solid gray;
+			  			/*padding: 5px;*/
+			  			/*.od-header {
+						   height: 40px;
+						   border-bottom: 1px solid gray;
+						}*/
+						.od-title{
+							padding: 10px;
+							width: 68%;
+							display: inline-block;
+							white-space: nowrap;
+						}
+						.od-status{
+							display: inline-block;
+							white-space: nowrap;
+							width: 30%;
+						}
+						.od-content {
+						   ul{
+						   	  padding: 15px;
+						   }
+						}
+						.od-attachment {
+						   height: 100px;
+						   .attachment-title {
+							  border: 1px solid gray;
+							  border-left: none;
+							  border-right: none;
+							  padding: 2px 10px 2px;
+							}
+							.media-container {
+								white-space: nowrap;
+							  	height: 75px;
+							  	overflow-x:auto;
+							  	overflow-y:hidden;
+							  	padding: 6px;
+							  	.media-thumb {
+								  width: 55px;
+								  height: 51px;
+								  margin: 2px;
+								  display: inline-block;
+								  background: gray;
+								}
+							}
+						}
+			  		}
+			  		.dispatcher-container {
+						margin-top: 5px;
+						.d-title{
+							padding: 10px;
+						}
+						.d-content{
+							min-height: 200px;
+							.dispatch-note-parent {
+							  	padding: 15px;
+								height: 150px;
+								overflow: auto;
+								border-bottom: 1px solid gray;
+							 	.dispatch-note-item {
+								   	padding: 8px;
+								   	border-left: 5px solid gray;
+								   	margin-bottom: 5px;
+								    .reporter-time {
+									  font-size: 10px;
+									  margin-bottom: 3px;
+								    }
+								    .dispatch-note {
+									  margin-bottom: 3px;
+									}
+								}
+							}
+							#dispatch-text-input{
+								margin: 0 0 5px 15px;
+  								width: 95%;
+							}
+							#dispatcher-btn {
+								margin: 0 0 8px 14px;
+							}
+						}
+					}
+			  	}
+			  	.col2{
+			  		float: left;
+			  		width: 40%;
+			  		height: inherit;
+			  		padding: 10px;
+			  		.chat-box {
+						height: 40%;
+						margin-bottom: 10px;
+						.chat-container{
+							padding: 15px;
+						  	height: 130px;
+						  	overflow: auto;
+						  	border-bottom: 1px solid gray;
+						  	.chat-item{
+						  		margin-bottom: 10px;
+						  		.chat-avatar{
+						  			background: gray;
+						  			width: 50px;
+						  			height: 50px;
+						  		}
+						  		.chat-content{
+									width: 80%;
+									padding: 7px;
+									background: #ADD8E6;
+									-moz-border-radius: 4px;
+	  								-webkit-border-radius: 4px;
+	  								border-radius: 4px;
+									.chat-user-name,.chat-message{
+										font-size: 11px;
+									}
+									.chat-message{
+										padding-top: 2px;
+									}
+						  		}
+						  		.float-left{
+						  			float: left;
+						  		}
+						  		.float-right{
+						  			float: right;
+						  		}
+						  	}
+						  	.arrow-box-right {
+								position: relative;
+								background: #88b7d5;
+							}
+							.arrow-box-right:after {
+								left: 100%;
+								top: 30px;
+								border: solid transparent;
+								content: " ";
+								height: 0;
+								width: 0;
+								position: absolute;
+								pointer-events: none;
+								border-color: rgba(136, 183, 213, 0);
+								border-left-color: #ADD8E6;
+								border-width: 5px;
+								margin-top: -22px;
+							}
+							.arrow-box-left {
+								position: relative;
+								background: #88b7d5;
+							}
+							.arrow-box-left:after {
+								right: 100%;
+								top: 30px;
+								border: solid transparent;
+								content: " ";
+								height: 0;
+								width: 0;
+								position: absolute;
+								pointer-events: none;
+								border-color: rgba(136, 183, 213, 0);
+								border-right-color: #ADD8E6;
+								border-width: 5px;
+								margin-top: -22px;
+							}
+						}
+						.chat-input {
+							margin: 3px 3px 3px 6px;
+							height: 30px;
+							width: 97%;
+						}
+					}
+
+					.mini-map{
+						height: 30%;
+						margin-bottom: 10px;
+						background: gray;
+					}
+					.dipatcher-log{
+						height: 65%;
+						ul{
+							height: 270px !important;
+						}
+					}
+			  	}
+			}
+
+	    }
+	}
+}
+.dialog-map {
+	  height: 400px;
+	  width: inherit;
+	  background: gray;
+}
+a.tool-close {
+  text-decoration: none;
+  color: #fff;
+}
+.modal {
+	display:none;
+	opacity:1;
+
+	.modal-dialog {
+		top: 100px;
+
+		button {
+			color: #fff;
+		}
+
+		.modal-header {
+			padding:8px 15px;
+
+			.btn-close {
+				background: url('../images/btn-close.png') no-repeat;
+				width:20px;
+				height:19px;
+				border:0;
+				outline: none;
+				float: right;
+				margin: 4px 0 0;
+			}
+		}
+
+		.modal-body {
+			overflow-y: auto;
+			/*max-height: 300px;*/
+			height: 300px;
+		}
+
+		.modal-footer {
+			margin: 0 25px;
+		}
+	}
+
+	.portlet {
+		position: relative;
+		margin:0;
+
+		.portlet-body {
+			padding:0 10px;
+
+			p {
+				margin:10px 8px;
+			}
+		}
+	}
+}
+.assign-responder{
+	width: 100px;
+}
+.glyphicon.spinning {
+    animation: spin 1s infinite linear;
+    -webkit-animation: spin2 1s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+.box-border{
+	border: 1px solid gray;
+}
+.box-body{
+	height: 145px;
+}
+.box-header {
+    height: 40px;
+    border-bottom: 1px solid gray;
+}
+.chat-box-title {
+	padding: 10px;
+}
+
+
+.no-style li {
+	list-style: none;
+}
+
+.ticket-table{
+	table-layout: fixed;	
+}
+.map-container {
+  position: absolute !important;
+  top: -30px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #030303;
+  height: 626px;
+}
+.bg-blood{
+	background-color: #C20606 !important;
+}
+.map-overlay-container {
+	position: absolute;
+	top:0;
+	left:0;
+}
+#ticket-entry-container {
+	tr{
+		cursor: pointer;
+		td{
+			&.t-time{
+				border-left: 4px solid transparent;
+				width: 50px;
+			}
+			&.t-id {
+			  width: 80px;
+			}
+			&.t-title {
+			  width: 226px;
+			  overflow: hidden;
+			  text-overflow: ellipsis;
+			  white-space: nowrap;
+			}
+			&.t-status {
+				width: 100px;
+				text-transform: uppercase;
+			}
+			&.t-status-open {
+				color: #f4af1c;
+			}
+			&.t-status-enroute {
+				color: blue;
+			}
+			&.t-status-on_site {
+				color: green;
+			}
+			&.t-status-close, &.t-status-new{
+				color: #666666;
+			}
+			&.t-icon{
+				width: 40px;
+				i{
+					background: url(../images/responder-icon.png) no-repeat;
+					height: 20px;
+					width: 20px;
+					float: right;
+					margin-right: 2px;
+				}
+				.i-alert {
+					background-position: 0 0;
+					display: inline-block;
+				}
+
+				.i-ambulance {
+					background-position: -25px 0;
+					display: inline-block;
+				}
+
+				.i-fire {
+					background-position: -50px 0;
+					display: inline-block;
+				}
+
+				.i-police {
+					background-position: -75px 0;
+					display: inline-block;
+				}
+			}
+			/*border*/
+			&.bl-fire{
+				border-left-color: orange;
+			}
+			&.bl-med{
+				border-left-color: yellow;
+			}
+			&.bl-crime{
+				border-left-color: blue;
+			}
+			&.bl-panic{
+				border-left-color: red;
+			}
+			&.bl-emergency{
+				border-left-color: black;
+			}
+		}
+		
+	}
+	
+}
+.portlet.box.blue.static {
+  position: static;
+}
+#column-group {
+	width: 1000px;
+	height: 450px;
+}
+#doughnut {
+	width: 550px;
+	height: 400px;
+}
