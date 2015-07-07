@@ -1474,7 +1474,23 @@ window.App.GChart = {
 	},
 
 	drawBarChart: function(chartData) {
+		// var data = google.visualization.arrayToDataTable(chartData);
+		var data = google.visualization.arrayToDataTable([
+	        ["Element", "Density", { role: "style" } ],
+	        ["Copper", 8.94, "#b87333"],
+	        ["Silver", 10.49, "silver"],
+	        ["Gold", 19.30, "gold"],
+	        ["Platinum", 21.45, "color: #e5e4e2"]
+	    ]);
 
+	    var view = new google.visualization.DataView(data);
+	    var options = {
+	    	legend: {position:'none'}
+	    };
+
+	    var chart = new google.visualization.BarChart(document.getElementById('bar'));
+
+	    chart.draw(view, options);
 	},
 
 	drawDoughnutChart: function(chartData) {
@@ -1501,6 +1517,8 @@ window.App.GChart = {
 
 				var dData = data.googleChart.doughnut;
 				self.drawDoughnutChart(dData);
+
+				self.drawBarChart();
 			}
 		});
 	}
