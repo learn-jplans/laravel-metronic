@@ -72,7 +72,7 @@ window.App.GChart = {
 				var dData = data.googleChart.doughnut;
 				self.drawDoughnutChart(dData);
 
-				self.drawBarChart();
+				self.drawBarChart(dData);
 			}
 		});
 	}
