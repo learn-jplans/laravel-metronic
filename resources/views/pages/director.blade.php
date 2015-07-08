@@ -1,7 +1,6 @@
 @extends('layout.app')
 @section('content')
-	<!-- <div id="column-group" class="chart" style="width:700px; height= 450px">
-	</div> -->
+	
 	<div class="row">
 		<div class="col-md-6">
 			<div class="portlet box blue static">
