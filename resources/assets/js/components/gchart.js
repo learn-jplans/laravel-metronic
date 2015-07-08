@@ -4,7 +4,7 @@ window.App.GChart = {
 	dataCollection:[],
 	init: function() {
 		var self = this;
-		// google.setOnLoadCallback(self.drawChart);
+
 		self.getData();
 	},
 
