@@ -28,7 +28,7 @@ window.App.GChart = {
 	},
 
 	drawBarChart: function(chartData) {
-		// var data = google.visualization.arrayToDataTable(chartData);
+
 		var data = google.visualization.arrayToDataTable([
 	        ["Element", "Density", { role: "style" } ],
 	        ["Copper", 8.94, "#b87333"],
