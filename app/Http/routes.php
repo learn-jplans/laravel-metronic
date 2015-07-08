@@ -43,7 +43,12 @@ Route::get('graph/google','GraphController@googleChart');
 Route::get('ticket/report', 'GraphController@getTicketReport');
 Route::get('ticket/category/report', 'GraphController@getTicketsByCategory');
 
+
 Route::get('jplans', function(){
 	return 'Hello jplans';
+});
+
+Route::get('hijplans', function(){
+	return 'Hi jplans';
 });
 
