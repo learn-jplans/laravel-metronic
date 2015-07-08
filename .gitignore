@@ -1,3 +1,8 @@
+/bootstrap/compiled.php
+/vendor
+composer.phar
+composer.lock
 /vendor
 /node_modules
 .env
+/.sass-cache
